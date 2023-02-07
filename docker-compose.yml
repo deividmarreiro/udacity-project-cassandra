@@ -1,0 +1,20 @@
+version: '3'
+services:
+  jupyter:
+    build: .
+    container_name: jupyter
+    ports:
+      - "8888:8888"
+    environment:
+      JUPYTER_TOKEN: jupyter_token
+    volumes:
+      - ./Project_1B_ Project_Template.ipynb:/home/jovyan/Project_1B_ Project_Template.ipynb
+      - ./event_data/:/home/jovyan/event_data
+      - ./output_data/:/home/jovyan/output_data
+    links:
+      - cassandra
+  cassandra:
+    image: cassandra
+    container_name: cassandra
+    ports:
+      - "9042:9042"
