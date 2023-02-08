@@ -7,8 +7,8 @@
 This *Udacity Data Engineering Nanodegree* project to create an database to a music app *Sparkify*. We'll use Cassandra as our database and the modeling of the tables is to answer the queries bellow:
 
   1.  `artist`, `song`(is the name/title of it) and song's `length` (aka durattion) for `sessionId=338` and `itemInSession=4`
-  2. `songinfo_by_user_by_session` includes artist, song and user for a given `userId` and `sessionId`
-  3. `userinfo_by_song` includes user names for a given song.
+  2. `songinfo_by_user_by_session` includes `artist`, `song` and `user` for a given `userId` and `sessionId`
+  3. `userinfo_by_song` includes `user` names for a given song.
 
 And all the pre processing, pipeline and modeling is in a single jupyter notebook.
 
